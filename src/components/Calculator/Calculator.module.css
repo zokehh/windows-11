@@ -1,0 +1,98 @@
+.container {
+   background-color: #1C1C1C;
+   position: absolute;
+   width: 365px;
+   left: 40%;
+   top: 10rem;
+   padding: 25px;
+   font-family: Helvetica;
+   border-radius: 10px;
+   visibility: hidden;
+   opacity: 0;
+   transition: .3s ease;
+}
+
+.active {
+   visibility: visible;
+   opacity: 1;
+   transition: .3s ease;
+}
+
+.calculatorGrid {
+   display: grid;
+   grid-template-columns: repeat(4, 4.5rem);
+   grid-template-rows: minmax(4.5rem, 4.5rem) repeat(5, 4.5rem);
+   gap: .5rem;
+}
+
+.header {
+   height: 40px;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+
+.header div {
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.header .red {
+   background-color: #FF605C;
+}
+
+.header .yellow {
+   background-color: #FFBD44;
+}
+
+.header .green {
+   background-color: #00CA4E;
+}
+
+.calculatorGrid button {
+   border-radius: 50%;
+   font-size: 24px;
+}
+
+.spanTwo {
+   grid-column: span 2;
+   border-radius: 75px !important;
+   background-color: #505050;
+   color: white;
+   border: none;
+   cursor: pointer;
+}
+
+.output {
+   grid-column: 1 / -1;
+   color: white;
+   font-size: 48px;
+   display: flex;
+   align-items: center;
+   margin-right: 10px;
+   justify-content: flex-end;
+   overflow-x: hidden;
+}
+
+.rightSide {
+   background-color:#FF9500;
+   color: white;
+   font-weight: bold;
+   border: none;
+   cursor: pointer;
+}
+
+.topSide {
+   background-color: #D4D4D2;
+   border: none;
+   cursor: pointer;
+}
+
+.calculatorButton {
+   background-color: #505050;
+   color: white;
+   border: none;
+   cursor: pointer;
+}

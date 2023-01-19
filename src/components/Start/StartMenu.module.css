@@ -1,0 +1,44 @@
+.container {
+   width: 600px;
+   height: 700px;
+   background-color: rgb(255, 255, 255);
+   position: absolute;
+   display: grid;
+   left: 30%;
+   bottom: 4rem;
+   border-radius: 20px;
+   padding: 50px;
+   transform: translateY(110%);
+   transition: .1s ease-in;
+}
+
+.pinned {
+   display: flex;
+   flex-direction: column;
+}
+
+.pinnedHeader {
+   display: flex;
+   justify-content: space-between;
+}
+
+.pinnedHeader button {
+   height: 30px;
+   padding: 0 12px;
+   background-color: white;
+   border: 1px solid black;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.pinnedItems {
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 25px;
+   row-gap: 1rem;
+}
+
+.active {
+   transform: translateY(0%);
+   transition: .1s ease-in;
+}

@@ -1,0 +1,30 @@
+.container {
+   width: 100vw;
+   height: 100vh;
+   padding: 25px 0;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+
+.desktopIcon {
+   width: 125px;
+   height: 75px;
+   color: white;
+   text-shadow: -1px 1px 2px black;
+   font-size: 14px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   cursor: context-menu;
+   border-radius: 5px;
+}
+
+.desktopIcon:hover {
+   background-color: rgb(238, 234, 234, 0.5);
+}
+
+.desktopIcon img {
+   width: 40px;
+}

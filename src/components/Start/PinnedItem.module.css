@@ -1,0 +1,28 @@
+.container {
+   width: 100px;
+   height: 75px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: context-menu;
+   border-radius: 5px;
+}
+
+.container:hover {
+   background-color: rgba(241, 237, 237, 1);
+}
+
+.container div {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.container div img {
+   width: 35px;
+}
+
+.container div p {
+   font-size: 13px;
+}
