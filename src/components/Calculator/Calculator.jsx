@@ -35,13 +35,15 @@ const Calculator = () => {
    }
 
    const switchSignHandler = () => {
-      setInput(prevState => {
-         if(prevState > 0) {
-            return input * -1
-         } else if (prevState < 0) {
-            return input * -1
-         }
-      })
+      if (input !== "") {
+         setInput(prevState => {
+            if(prevState > 0) {
+               return input * -1
+            } else if (prevState < 0) {
+               return input * -1
+            }
+         })
+      }
    }
 
    const getResultHandler = () => {
@@ -54,7 +56,7 @@ const Calculator = () => {
 
       switch(operator) {
          case "%":
-            setInput(eval(pNumb % cNumb) / 100)
+            setInput((eval(pNumb % cNumb).toFixed(2) / 100))
             break
          case "+":
             setInput(eval(pNumb + cNumb))
@@ -63,7 +65,7 @@ const Calculator = () => {
             setInput(eval(pNumb - cNumb))
             break
          case "/":
-            setInput(eval(pNumb / cNumb))
+            setInput(eval(pNumb / cNumb).toFixed(2))
             break
          case "*":
             setInput(eval(pNumb * cNumb))

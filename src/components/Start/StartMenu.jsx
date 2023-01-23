@@ -3,84 +3,6 @@ import { AuthContext } from '../../../store/taskbar-auth'
 import PinnedItem from './PinnedItem'
 import classes from './StartMenu.module.css'
 
-const DUMMY_ICONS = [
-   {
-      id: 'i1',
-      image: '/images/vscode.png',
-      name: 'VS code',
-   },
-   {
-      id: 'i11',
-      image: '/images/chrome.png',
-      name: 'Chrome',
-   },
-   {
-      id: 'i2',
-      image: '/images/calculator.png',
-      name: 'Calculator',
-   },
-   {
-      id: 'i3',
-      image: '/images/discord.png',
-      name: 'Discord',
-   },
-   {
-      id: 'i4',
-      image: '/images/settings.png',
-      name: 'Settings',
-   },
-   {
-      id: 'i5',
-      image: '/images/spotify.png',
-      name: 'Spotify',
-   },
-   {
-      id: 'i6',
-      image: '/images/mail.png',
-      name: 'Mail',
-   },
-   {
-      id: 'i7',
-      image: '/images/clock.png',
-      name: 'Clock',
-   },
-   {
-      id: 'i8',
-      image: '/images/calendar.png',
-      name: 'Calendar',
-   },
-   {
-      id: 'i9',
-      image: '/images/microsoft-store.png',
-      name: 'Microsoft Store',
-   },
-   {
-      id: 'i10',
-      image: '/images/file-explorer.png',
-      name: 'File Explorer',
-   },
-   {
-      id: 'i12',
-      image: '/images/messenger.png',
-      name: 'Messenger',
-   },
-   {
-      id: 'i13',
-      image: '/images/disney.png',
-      name: 'Disney+',
-   },
-   {
-      id: 'i14',
-      image: '/images/xbox.png',
-      name: 'XBOX',
-   },
-   {
-      id: 'i15',
-      image: '/images/images.webp',
-      name: 'Images',
-   },
-]
-
 const StartMenu = () => {
    const ctx = useContext(AuthContext)
 
@@ -92,7 +14,23 @@ const StartMenu = () => {
                <button>All applications {`>`}</button>
             </div>
             <div className={classes.pinnedItems}>
-               {DUMMY_ICONS.map(item => <PinnedItem key={item.id} items={item} />)}
+               <PinnedItem image={'/images/chrome.png'} name={'Chrome'} />
+               <PinnedItem image={'/images/vscode.png'} name={'VS Code'} />
+               <div onClick={ctx.showCalculator}><PinnedItem  image={'/images/calculator.png'} name={'Calculator'} /></div>
+               <PinnedItem image={'/images/discord.png'} name={'Discord'} />
+               <PinnedItem image={'/images/settings.png'} name={'Settings'} />
+
+               <PinnedItem image={'/images/spotify.png'} name={'Spotify'} />
+               <PinnedItem image={'/images/mail.png'} name={'Mail'} />
+               <PinnedItem image={'/images/clock.png'} name={'Clock'} />
+               <PinnedItem image={'/images/calendar.png'} name={'Calendar'} />
+               <PinnedItem image={'/images/microsoft-store.png'} name={'Microsoft Store'} />
+
+               <PinnedItem image={'/images/file-explorer.png'} name={'File Explorer'} />
+               <PinnedItem image={'/images/messenger.png'} name={'Messenger'} />
+               <PinnedItem image={'/images/disney.png'} name={'Disney+'} />
+               <PinnedItem image={'/images/xbox.png'} name={'Xbox'} />
+               <PinnedItem image={'/images/images.webp'} name={'Images'} />
             </div>
          </div>
       </div>

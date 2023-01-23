@@ -5,6 +5,7 @@ export const AuthContext = createContext()
 const AuthContextProvider = (props) => {
    const [isStartMenuShowed, setIsStartMenuShowed] = useState(false)
    const [isCalculatorShowed, setIsCalculatorShowed] = useState(false)
+   const [isNotepadShowed, setIsNotepadShowed] = useState(false)
 
    const showCalculator = () => {
       setIsCalculatorShowed(true)
@@ -14,13 +15,24 @@ const AuthContextProvider = (props) => {
       setIsCalculatorShowed(false)
    }
 
+   const showNotepad = () => {
+      setIsNotepadShowed(true)
+   }
+
+   const hideNotepad = () => {
+      setIsNotepadShowed(false)
+   }
+
    return (
       <AuthContext.Provider value={{
          isStartMenuShowed,
          setIsStartMenuShowed,
          isCalculatorShowed,
          showCalculator,
-         hideCalculator
+         hideCalculator,
+         isNotepadShowed,
+         showNotepad,
+         hideNotepad,
       }}>
          {props.children}
       </AuthContext.Provider>

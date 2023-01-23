@@ -9,13 +9,13 @@
    border-radius: 10px;
    visibility: hidden;
    opacity: 0;
-   transition: .3s ease;
+   transition: .2s ease;
 }
 
 .active {
    visibility: visible;
    opacity: 1;
-   transition: .3s ease;
+   transition: .2s ease;
 }
 
 .calculatorGrid {

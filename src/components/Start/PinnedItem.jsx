@@ -4,8 +4,8 @@ const PinnedItem = (props) => {
    return (
       <div className={classes.container}>
          <div>
-            <img src={props.items.image} alt="" />
-            <p>{props.items.name}</p>
+            <img src={props.image} alt="" />
+            <p>{props.name}</p>
          </div>
       </div>
    )

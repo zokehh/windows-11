@@ -41,8 +41,8 @@ const Footer = () => {
             <div className={classes.icons}><img src="/images/wired-network-connection.png" alt="" /></div>
             <div className={classes.icons}><img src="/images/speaker.png" alt="" /></div>
             <div className={classes.date}>
-               <p>{`${hours}:${minutes ? minutes : '00'}`}</p>
-               <p>{year}</p>
+               <p>{`${hours.toString()}:${minutes ? minutes : '00'}`}</p>
+               <p>{year.toString()}</p>
             </div>
             <img src='/images/notification.png' alt='' />
          </div>

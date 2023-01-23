@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Segoe UI Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Segoe UI Regular'), url('/fonts/Segoe\ UI.woff') format('woff');
+}
+
 body {
   overflow: hidden;
 }
@@ -13,5 +20,10 @@ body {
   height: 100vh;
   background-image: url('/images/wallpaper.jpg');
   background-size: cover;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: windows;
+  font-family: 'Segoe UI Regular';
+}
+
+.bold {
+  font-weight: bold;
 }
